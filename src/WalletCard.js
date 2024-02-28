@@ -52,7 +52,7 @@ const WalletCard = () => {
         window.ethereum
             .request({ method: 'eth_getBalance', params: [address, 'latest'] })
             .then((balance) => {
-                setUserBalance(ethers.utils.formatEther(balance));
+                setUserBalance(ethers.formatEther(balance));
             })
             .catch((error) => {
                 console.error('Failed to fetch balance:', error);
